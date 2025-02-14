@@ -11,7 +11,7 @@ const Specialday = () => {
 
   return (
     <div className="px-4 py-6">
-      <h1 className="text-center font-semibold text-3xl md:text-4xl mb-2">Decorate for your special persion</h1>
+      <h1 className="text-center font-semibold text-2xl md:text-4xl mb-2">Decorate for your special persion</h1>
       <h3 className="text-gray-600 text-center mb-6">Surprise Your Loved Ones</h3>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {gifts.map((gift, index) => (
