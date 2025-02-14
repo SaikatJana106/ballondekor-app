@@ -46,7 +46,7 @@ const Nav = () => {
             </div>
 
             {/* Icons Section */}
-            <div className={`absolute top-16 left-0 w-full bg-white shadow-md md:static md:flex md:items-center md:gap-x-6 md:shadow-none md:w-auto ${menuOpen ? "block" : "hidden"}`}>
+            <div className={`absolute top-16 z-50 left-0 w-full bg-white shadow-md md:static md:flex md:items-center md:gap-x-6 md:shadow-none md:w-auto ${menuOpen ? "block" : "hidden"}`}>
                 <div className="flex flex-col md:flex-row items-center gap-y-4 md:gap-y-0 md:gap-x-6 py-4 md:py-0">
                     <div className="flex items-center gap-x-2 cursor-pointer">
                         <Map className="text-gray-700 hover:text-blue-500" size={28} />
