@@ -16,7 +16,7 @@ const Options = () => {
             <h1 className="text-center text-4xl font-bold flex flex-col items-center my-6">
                 <div className="flex items-center gap-4">
               
-                    <span className="text-gray-900">Choose Your Decoration</span>
+                    <h1 className="text-gray-900 max-md:text-2xl">Choose Your Decoration</h1>
                     
                 </div>
                 <span className="text-gray-400 text-lg mt-2">Wide Range Collection</span>
