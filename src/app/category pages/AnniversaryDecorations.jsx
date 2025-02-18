@@ -78,48 +78,46 @@ const AnniversaryDecorations = () => {
     ];
 
     return (
-        <div>
-            <div className="p-6">
-                <div className="flex justify-between items-center mb-6">
-                    <h1 className="text-2xl font-bold max-md:text-xl">Anniversary Decorations</h1>
-                    <span className="text-blue-600 cursor-pointer hover:underline">View all</span>
-                </div>
+        <div className="p-6">
+            <div className="flex justify-between items-center mb-6">
+                <h1 className="text-2xl font-bold max-md:text-xl">Anniversary Decorations</h1>
+                <span className="text-blue-600 cursor-pointer hover:underline">View all</span>
+            </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {anniversaryDecorations.map((item, i) => (
-                        <div key={i} className="border rounded-lg bg-white">
-
-                            <div className="relative overflow-hidden rounded-lg border-2 border-gray-300">
-                                <Image
-                                    src={item.image}
-                                    alt={item.topic}
-                                    loading="lazy"
-                                    width={250}
-                                    height={250}
-                                    className="object-cover w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
-                                />
-                                <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
-                                    <Heart className="text-red-500 hover:scale-110 transition-transform" />
-                                </div>
-                            </div>
-
-                            {/* Text Content */}
-                            <div className="mt-4 text-center">
-                                <span className="block text-md font-semibold">{item.topic}</span>
-                                <div className="flex justify-center items-center gap-2 text-lg font-bold text-gray-900 mt-2">
-                                    <span>₹{item.newPrice}</span>
-                                    <span className="text-gray-500 line-through text-sm">₹{item.oldPrice}</span>          
-                                </div>
-                                <span className="text-red-500 text-sm">{item.off}</span>
-                                {/* Ratings and Reviews */}
-                                <div className="flex justify-center items-center mt-2 text-gray-600 pb-5">
-                                    <Star className="text-yellow-500" size={16} />
-                                    <span className="ml-1 text-sm">{item.ratings} ({item.reviews})</span>
-                                </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                {anniversaryDecorations.map((item, i) => (
+                    <div key={i} className="border rounded-lg bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                        {/* Image Container */}
+                        <div className="relative w-full h-[200px] md:h-[250px] lg:h-[280px] overflow-hidden rounded-lg border-2 border-gray-300">
+                            <Image
+                                src={item.image}
+                                alt={item.topic}
+                                loading="lazy"
+                                fill
+                                className="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105"
+                            />
+                            <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+                                <Heart className="text-red-500 hover:scale-110 transition-transform" />
                             </div>
                         </div>
-                    ))}
-                </div>
+
+                        {/* Text Content */}
+                        <div className="p-3 text-center">
+                            <span className="block text-sm md:text-md font-semibold">{item.topic}</span>
+                            <div className="flex justify-center items-center gap-2 text-sm md:text-lg font-bold text-gray-900 mt-2">
+                                <span>₹{item.newPrice}</span>
+                                <span className="text-gray-500 line-through text-xs md:text-sm">₹{item.oldPrice}</span>
+                            </div>
+                            <span className="text-red-500 text-xs md:text-sm">{item.off}</span>
+
+                            {/* Ratings and Reviews */}
+                            <div className="flex justify-center items-center mt-2 text-gray-600 pb-5">
+                                <Star className="text-yellow-500" size={16} />
+                                <span className="ml-1 text-xs md:text-sm">{item.ratings} ({item.reviews})</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

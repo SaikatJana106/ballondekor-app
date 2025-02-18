@@ -13,40 +13,42 @@ const Hero = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows:false,
+        arrows: false,
     };
 
     return (
         <div className="overflow-hidden py-4 px-10 max-sm:px-2">
             <Slider {...settings}>
-                <div>
+               
+                <div className="relative w-full h-[400px] max-md:h-[300px] max-sm:h-[200px]">
                     <Image 
                         src="/fist pic.avif" 
                         alt="First Banner" 
                         loading="lazy"
-                        width={1920} 
-                        height={600} 
-                        className="rounded-2xl"
+                        fill
+                        className="rounded-2xl object-cover max-sm:object-contain"
                     />
                 </div>
-                <div>
+
+                
+                <div className="relative w-full h-[400px] max-md:h-[300px] max-sm:h-[200px]">
                     <Image 
                         src="/forth pic.avif" 
                         alt="Second Banner" 
                         loading="lazy"
-                        width={1920} 
-                        height={600} 
-                        className="rounded-2xl"
+                        fill
+                        className="rounded-2xl object-cover max-sm:object-contain"
                     />
                 </div>
-                <div>
+
+                
+                <div className="relative w-full h-[400px] max-md:h-[300px] max-sm:h-[200px]">
                     <Image 
                         src="/fifth pic.avif" 
                         alt="Third Banner" 
                         loading="lazy"
-                        width={1920} 
-                        height={600} 
-                        className="rounded-2xl"
+                        fill
+                        className="rounded-2xl object-cover max-sm:object-contain"
                     />
                 </div>
             </Slider>

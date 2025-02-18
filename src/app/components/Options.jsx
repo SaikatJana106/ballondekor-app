@@ -27,7 +27,7 @@ const Options = () => {
                 {options.map((option, index) => (
                     <div key={index} className="flex flex-col items-center bg-white shadow-md rounded-xl p-3">
                         <img
-                            className="  rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
+                            className="rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
                             src={option.src}
                             alt={option.text}
                         />
