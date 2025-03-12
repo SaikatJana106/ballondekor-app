@@ -14,9 +14,9 @@ const Nav = () => {
             </div>
 
             {/* Search & Delivery Inputs */}
-            <div className="flex-1 flex items-center gap-x-4 mx-4">
+            <div className="flex flex-wrap items-center gap-4 mx-4">
                 {/* Delivery Input */}
-                <div className="relative flex items-center flex-1">
+                <div className="relative flex items-center flex-1 min-w-0 w-full md:w-1/2">
                     <input
                         type="text"
                         placeholder="Delivery to?"
@@ -26,7 +26,7 @@ const Nav = () => {
                 </div>
 
                 {/* Search Input */}
-                <div className="relative flex items-center flex-1">
+                <div className="relative flex items-center flex-1 min-w-0 w-full md:w-1/2">
                     <input
                         type="text"
                         placeholder="Search here..."
@@ -35,6 +35,7 @@ const Nav = () => {
                     <Search className="absolute left-3 text-gray-500" size={20} />
                 </div>
             </div>
+
 
             {/* Hamburger Menu for small screens */}
             <div className="md:hidden">
@@ -50,19 +51,19 @@ const Nav = () => {
                 <div className="flex flex-col md:flex-row items-center gap-y-4 md:gap-y-0 md:gap-x-6 py-4 md:py-0">
                     <div className="flex items-center gap-x-2 cursor-pointer">
                         <Map className="text-gray-700 hover:text-blue-500" size={28} />
-                        <span>Track Order</span>
+                        <span className="text-[1vw]">Track Order</span>
                     </div>
                     <div className="flex items-center gap-x-2 cursor-pointer">
                         <Gift className="text-gray-700 hover:text-blue-500" size={28} />
-                        <span>Gift</span>
+                        <span className="text-[1vw]">Gift</span>
                     </div>
                     <div className="flex items-center gap-x-2 cursor-pointer">
                         <ShoppingBag className="text-gray-700 hover:text-blue-500" size={28} />
-                        <span>Cart</span>
+                        <span className="text-[1vw]">Cart</span>
                     </div>
                     <div className="flex items-center gap-x-2 cursor-pointer">
                         <UsersRound className="text-gray-700 hover:text-blue-500" size={28} />
-                        <span>Login</span>
+                        <span className="text-[1vw]">Login</span>
                     </div>
                 </div>
             </div>

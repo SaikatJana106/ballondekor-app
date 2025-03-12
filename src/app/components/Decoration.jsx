@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-
 const Decoration = () => {
     return (
         <div className="bg-[rgb(190,64,86)] py-8 px-4">
